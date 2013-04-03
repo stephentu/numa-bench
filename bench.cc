@@ -17,8 +17,9 @@
 // hardcoded for x86
 #define CACHELINE 64
 
-// allocate 512MB per thread- this makes the data not fit in L1/L2/L3
-// caches
+// allocate 512MB per thread- this makes the data not fit in L1/L2/L3 caches.
+// for a 30MB L3 cache, only 6% of *each* thread's data can fit completely in
+// the cache
 #define WORKING_SET_BYTES (512 * (1<<20))
 
 #define NOPS 10000000
